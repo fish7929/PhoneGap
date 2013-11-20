@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"  content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.theme-1.3.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/jquery.mobile.structure-1.3.2.min.css" />
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript">
+			
+		</script>
+		<script type="text/javascript" src="js/jquery.mobile-1.3.2.min.js"></script>
+		<title>Form and List </title>
+    </head>
+    <body>
+        <div data-role="page" id="page">
+			<div data-role="header" >
+				<a href="#" data-icon="arrow-l">Back</a>
+				<h1>The first page</h1>
+				<a href="#" data-icon="gear" data-theme="b">Set</a>
+				<!--
+				<a href="#" data-role="button" data-icon="gear" data-iconpos="right" class="ui-btn-right">Set</a>
+				<div data-role="navbar" data-theme="a" data-grid="d">
+					<ul>
+						<li><a href="#" class="ui-btn-active">One</a></li>
+						<li><a href="#" >Two</a></li>
+						<li><a href="#" >Three</a></li>
+						<li><a href="#" >Four</a></li>
+						<li><a href="#" >Five</a></li>
+					</ul>
+				</div>
+				-->
+			</div>
+            <div data-role="content">
+				<div data-role="collapsible" data-collapsed="false" data-theme="b" data-content-theme="d" data-collapsed-icon="arrow-d" data-expanded-icon="arrow-u" data-mini="true"> 
+					<h4>Heading</h4> 
+					<p>I'm the collapsible content. By default I'm closed, but you can click the header to open me.</p> 
+				</div>
+				
+				<form> 
+					<fieldset data-role="collapsible" data-theme="a" data-content-theme="d"> 
+					<legend>Legend</legend> 
+						<label for="textinput-f">Text Input:</label> 
+						<input name="textinput-f" id="textinput-f" placeholder="Text input" value="" type="text"> 
+						<div data-role="controlgroup"> 
+							<input name="checkbox-1-a" id="checkbox-1-a" type="checkbox"> 
+							<label for="checkbox-1-a">One</label> 
+							<input name="checkbox-2-a" id="checkbox-2-a" type="checkbox"> 
+							<label for="checkbox-2-a">Two</label> 
+							<input name="checkbox-3-a" id="checkbox-3-a" type="checkbox"> 
+							<label for="checkbox-3-a">Three</label> 
+						</div> 
+					</fieldset> 
+				</form>
+				
+			</div>
+			
+			<div data-role="footer" style="overflow:hidden;">
+				<h4 style="text-align:center;">I'm the footer</h4> 
+				<!-- 
+				<div data-role="navbar" data-iconpos="bottom"> 
+					<ul>
+						<li><a href="#" data-icon="grid">Summary</a></li> 
+						<li><a href="#" data-icon="star">Favs</a></li> 
+						<li><a href="#" data-icon="gear">Setup</a></li> 
+					</ul> 
+				</div>
+				-->
+				<!--自定义样式-->
+				<div data-role="navbar" class="nav-glyphish-example" data-grid="d"> 
+					<ul>
+						<li><a href="#" id="chat" data-icon="custom">Chat</a></li> 
+						<li><a href="#" id="email" data-icon="custom">Email</a></li> 
+						<li><a href="#" id="skull" data-icon="custom">Danger</a></li> 
+						<li><a href="#" id="beer" data-icon="custom">Beer</a></li> 
+						<li><a href="#" id="coffee" data-icon="custom">Coffee</a></li> 
+					</ul> 
+				</div>
+			</div>
+        </div>
+		<style type="text/css">
+			#chat .ui-icon{
+				background:url(img/glyphish-icons/09-chat2.png) no-repeat 50% 50%;
+			}
+			
+			#email .ui-icon{
+				background:url(img/glyphish-icons/18-envelope.png) no-repeat 50% 50% ;
+			}
+			
+			#skull .ui-icon{
+				background:url(img/glyphish-icons/21-skull.png) no-repeat 50% 50% ;
+			}
+			
+			#beer .ui-icon{
+				background:url(img/glyphish-icons/88-beermug.png) no-repeat 50% 50% ;
+			}
+			
+			
+			#coffee .ui-icon{
+				background:url(img/glyphish-icons/100-coffee.png) no-repeat 50% 50%;
+			}
+		</style>
+    </body>
+</html>

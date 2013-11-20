@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
+<script>
+$(document).on("pageinit","#pagetwo",function(){
+  alert("pageinit event fired - the page has been initialized, the DOM has been loaded and jQuery Mobile has finished enhancing the page")
+}); 
+$(document).on("pagebeforecreate","#pagetwo",function(){
+  alert("pagebeforecreate event fired - the page is about to be initialized. jQuery Mobile has not begun enhancing the page");
+});                     
+$(document).on("pagecreate","#pagetwo",function(){
+  alert("pagecreate event fired - the page has been created, but enhancement is not complete");
+});
+$(document).on("pagecreate","#pageone",function(){
+  $("a").on("tap",function(){
+    $(this).attr('href','#pagetwo'); 
+  });  
+});
+</script>
+</head>
+<body>
+
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Header Text</h1>
+  </div>
+
+  <div data-role="content">
+    <a data-role="button" data-icon="arrow-r">next</a>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
+<div data-role="page" id="pagetwo">
+  <div data-role="header">
+    <h1>Header Text</h1>
+  </div>
+
+  <div data-role="content">
+    <p>Content...</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>Footer Text</h1>
+  </div>
+</div> 
+
+</body>
+</html>
